@@ -10,10 +10,17 @@ FetchContent_Declare(
 )
 
 FetchContent_Declare(
+    clap-wrapper
+    GIT_REPOSITORY https://github.com/free-audio/clap-wrapper
+    GIT_TAG main
+    FIND_PACKAGE_ARGS NAMES clap-wrapper
+)
+
+FetchContent_Declare(
     clap-helpers
     GIT_REPOSITORY https://github.com/free-audio/clap-helpers.git
     GIT_TAG main
     FIND_PACKAGE_ARGS NAMES clap-helpers
 )
 
-FetchContent_MakeAvailable(clap clap-helpers)
+FetchContent_MakeAvailable(clap clap-helpers clap-wrapper)
