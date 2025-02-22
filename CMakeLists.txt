@@ -8,8 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CLAP_WRAPPER_DOWNLOAD_DEPENDENCIES TRUE CACHE BOOL "Download Dependencies")
 set(CLAP_WRAPPER_OUTPUT_NAME "${PROJECT_NAME}")
 set(CLAP_WRAPPER_DONT_ADD_TARGETS TRUE)
+
 include(cmake/Dependencies.cmake)
 
+add_subdirectory(clap-wrapper)
 
 
 add_library(${PROJECT_NAME} MODULE
